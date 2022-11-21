@@ -1,0 +1,235 @@
+:root {
+  font-family: "Rad Hat Display", sans-serif;
+
+  /* primary */
+  --p-blue: hsla(245, 75%, 52%, 1);
+  --p-dark-blue: hsla(223, 46%, 23%, 1);
+  --p-lt-blue: hsla(245, 83%, 68%, 1);
+  /* neutral */
+  --n-dark-gray: hsla(224, 23%, 55%, 1);
+  --n-lt-gray: hsla(228, 100%, 99%, 1);
+  --n-white: hsla(0, 0%, 100%, 1);
+  --n-bg: hsla(225, 100%, 94%, 1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+* img {
+  display: block;
+}
+
+* a {
+  text-decoration: none;
+  color: inherit;
+}
+
+* button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+body {
+  height: 100vh;
+  background-image: url("./images/pattern-background-desktop.svg");
+  background-color: var(--n-bg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 16px;
+  max-width: 450px;
+  max-height: 700px;
+  background-color: var(--n-white);
+  box-shadow: 0px 40px 40px -20px rgba(13, 48, 189, 0.151826);
+  margin: auto;
+}
+
+.banner {
+  display: block;
+  margin: auto;
+  overflow: hidden;
+  max-width: 100%;
+  border-radius: 16px 16px 0 0;
+}
+
+.card {
+  padding: 48px;
+}
+
+#title {
+  font-size: 1.75rem;
+  font-weight: 900;
+  color: var(--p-dark-blue);
+  padding-bottom: 1rem;
+}
+
+#description {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.625rem;
+  color: var(--n-dark-gray);
+  padding-bottom: 1rem;
+}
+
+.payment {
+  padding: 24px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--n-lt-gray);
+}
+
+.plan {
+  text-align: left;
+}
+
+#planTitle,
+#planDescription {
+  font-size: 1rem;
+}
+
+#planTitle {
+  font-weight: 900;
+  color: var(--p-dark-blue);
+}
+
+#planDescription {
+  font-weight: 500;
+  color: var(--n-dark-gray);
+}
+
+.change {
+  font-weight: 900;
+  font-size: 1rem;
+  margin-left: 60px;
+  color: var(--p-blue);
+}
+
+.change:hover {
+  color: var(--p-lt-blue);
+}
+
+.change:after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: var(--p-blue);
+  margin-top: -4px;
+  transition: ease-in 0.5s;
+}
+
+.change:hover:after {
+  background-color: var(--p-lt-blue);
+  width: 0%;
+}
+
+.payment-btn {
+  display: flex;
+  flex-direction: column;
+}
+
+.button {
+  align-items: center;
+  text-align: center;
+  border-radius: 12px;
+  margin: 2rem 0;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--n-white);
+  background-color: var(--p-blue);
+  filter: drop-shadow(0 8px 6px rgba(7, 23, 255, 0.245));
+  transition: ease-in 0.3s;
+}
+
+.button:hover {
+  background-color: var(--p-lt-blue);
+  transition: ease-in 0.5s;
+}
+
+.cancel-order {
+  font-weight: 700;
+  color: var(--n-dark-gray);
+  transition: ease-in 0.3s;
+}
+
+.cancel-order:hover {
+  color: var(--p-dark-blue);
+  transition: ease-in 0.5s;
+}
+
+@media (max-width: 375px) {
+  body {
+    background-image: url("./images/pattern-background-mobile.svg");
+  }
+
+  .container {
+    max-width: 325px;
+    max-height: 570px;
+  }
+
+  .card {
+    padding: 2rem 1.5rem 1rem 1.5rem;
+  }
+
+  #title {
+    font-size: 1.375rem;
+  }
+
+  .payment {
+    padding: 1rem;
+  }
+
+  #planTitle {
+    font-size: 12px;
+  }
+
+  #description,
+  #planDescription {
+    font-size: 14px;
+    line-height: 1.5625rem;
+  }
+
+  .change {
+    margin-left: 10px;
+    font-size: 13px;
+  }
+
+  .change:after {
+    margin-top: 0px;
+  }
+
+  .button {
+    margin: 1.5rem 0;
+  }
+}
+
+.attribution {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.attribution a {
+  color: var(--p-blue);
+}
